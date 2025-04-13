@@ -3,7 +3,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'shared-search-box',
   standalone: false,
-  // imports: [],
   templateUrl: './searchBox.component.html',
   styles: `
     :host {
