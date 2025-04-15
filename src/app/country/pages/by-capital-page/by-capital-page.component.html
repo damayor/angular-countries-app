@@ -2,9 +2,15 @@
 
 <search-input
   placeholder="Buscar por capital del pais"
-  (value)="onSearch($event)"
+  (value)="query.set($event)"
 />
 
 <country-list
-  [countries]="countries()"
->
+  [countries]="countryResource.value() ?? []"
+  [errorMessage]="countryResource.error()"
+  [isEmptry]="countryResource.value()?.length == 0"
+  [isLoading]="countryResource.isLoading()"
+/>
+
+
+

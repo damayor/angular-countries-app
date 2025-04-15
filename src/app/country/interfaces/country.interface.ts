@@ -5,4 +5,9 @@ export interface Country {
   name: string;
   capital?: string ;
   population: number;
+  phoneCode:string;
+  domain: string;
+  coatSvg: string;
+  area: number;
+
 }

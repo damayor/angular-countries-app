@@ -12,7 +12,11 @@ export class CountryMapper {
       flagSvg : item.flags.svg,
       name : item.translations["spa"].common,
       capital : item.capital.at(0),
-      population : item.population
+      population : item.population,
+      phoneCode: item.idd.root + item.idd.suffixes[0],
+      domain: item.tld[0],
+      coatSvg: item.coatOfArms.svg,
+      area: item.area
     }
   }
 
