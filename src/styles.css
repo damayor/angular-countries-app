@@ -2,5 +2,5 @@
 @import "tailwindcss";
 @source "./public/*.{html,js}";
 @plugin "daisyui" {
-  themes: sunset --default;
+  themes: retro --default;
 }
