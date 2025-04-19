@@ -3,6 +3,7 @@
 <search-input
   placeholder="Buscar por capital del pais"
   (value)="query.set($event)"
+  [initialValue]="query()"
 />
 
 <country-list

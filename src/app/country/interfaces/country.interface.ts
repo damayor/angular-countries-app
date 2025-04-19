@@ -9,5 +9,14 @@ export interface Country {
   domain: string;
   coatSvg: string;
   area: number;
-
+  region: string;
+  subregion: string;
 }
+
+export type Region =
+  | 'Africa'
+  | 'Americas'
+  | 'Asia'
+  | 'Europe'
+  | 'Oceania'
+  | 'Antarctic';

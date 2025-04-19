@@ -1,5 +1,28 @@
 
+<h1 class="text-2xl">Por region</h1>
+<h3 class="text-lg">Seleccione una regin</h3>
+
+<section class="row mt-2">
+  <div class="flex-col">
+    @for(region of regions; track region) {
+      <!-- //[routerLink]="['/country/by-region', region]" routerLinkActive="btn-accent" -->
+      <button
+        class="btn btn-outline mr-2 w-[100px]"
+        (click)="selectedRegion.set(region)"
+        [class.btn-accent]="selectedRegion() == region"
+      >
+        {{region}}
+      </button>
+
+    }
+
+  </div>
+</section>
+
 
 <country-list
-  [countries]="countries()"
->
+  [countries]="countryResource.value() ?? []"
+  [errorMessage]="countryResource.error()"
+  [isEmptry]="countryResource.value()?.length == 0"
+  [isLoading]="countryResource.isLoading()"
+/>
